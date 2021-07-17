@@ -23,6 +23,7 @@
   background-color: transparent;
   color: #fff;
   border: 2px solid #fff;
+  border-radius: 5px;
   font-size: 1.6rem;
   padding: 0.3em 0.7em;
   cursor: pointer;
@@ -32,6 +33,24 @@
 .btn:hover {
   background-color: #fff;
   color: #333;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5em 0.8em;
+  transition: .3s;
+}
+
+.link:hover {
+  background-color: #ccc;
+}
+
+.link--active {
+  color: tomato;
 }
 
 /* header */
@@ -46,8 +65,12 @@
 
 .header__slogan-wrapper {
   position: absolute;
-  left: 55px;
+  /* left: 55px; */
   top: 34px;
+  left: 0;
+  right: 0;
+  padding: 1rem 0 1rem 55px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .header__slogan {
@@ -63,8 +86,36 @@
   font-size: 1.8rem;
 }
 
-.header__button-wrapper {
+.header__btn-wrapper {
   position: absolute;
   bottom: 34px;
   right: 55px;
+}
+
+/* nav */
+.nav {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.nav__logo-wrapper {
+  flex-basis: 50px;
+}
+
+.nav__logo {
+  width: 100%
+}
+
+.nav__company-name {
+  padding: 0 2rem 0 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
 }
