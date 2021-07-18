@@ -156,9 +156,48 @@
   width: 250px
 }
 
+/* main content */
+.main {
+  padding: 2rem 4rem;
+}
+
+/* article */
+
+.article {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.article--last {
+  margin-bottom: 0;
+}
+
+.article__title {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.article__info {
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-bottom: 0.6rem;
+}
+
+.article__heading-5 {
+  font-size: 1.3rem;
+  margin: .5rem 0;
+}
+
+.article__paragraph {
+  font-size: 1rem;
+}
+
 /* footer */
 .footer {
-  padding: 1rem 4rem
+  padding: 2rem 4rem;
+  border-top: 1px solid #000;
+  
 }
 
 .footer_copyright {
