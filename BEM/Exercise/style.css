@@ -30,9 +30,24 @@
   transition: background-color .3s, color .3s;
 }
 
+.btn--dark {
+  border-color: #000;
+  color: #000;
+}
+
+.btn--small {
+  font-size: 1rem;
+  padding: 0.2em 0.5em
+}
+
 .btn:hover {
   background-color: #fff;
   color: #333;
+}
+
+.btn--dark:hover {
+  background-color: #000;
+  color: #ccc;
 }
 
 .link {
@@ -51,6 +66,11 @@
 
 .link--active {
   color: tomato;
+}
+
+.text-input {
+  font-size: 1rem;
+  padding: 0.2em 0.5em 
 }
 
 /* header */
@@ -118,4 +138,20 @@
 .nav__list {
   list-style: none;
   display: flex;
+}
+
+/* search bar */
+.search-bar {
+  padding: 1rem;
+}
+
+.search-bar__form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search-bar__search-input {
+  margin-right: 1rem;
+  width: 250px
 }
