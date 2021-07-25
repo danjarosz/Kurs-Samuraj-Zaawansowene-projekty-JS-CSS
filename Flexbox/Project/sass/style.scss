@@ -1,5 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+$main-color: #8daae5;
+$default-font: arial, sans-serif;
+$special-font: 'pt sans', roboto, arial, sans-serif;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  background-color: $main-color;
+  font-family: $default-font;
+}
+
+.wrapper {
+  // kontener
+  display: flex;
+  flex-wrap: wrap;
+  // pozycja
+  max-width: 1000px;
+  margin: 0 auto;
+  // wygląd
+  font-size: 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 4px 0 #000;
 }
