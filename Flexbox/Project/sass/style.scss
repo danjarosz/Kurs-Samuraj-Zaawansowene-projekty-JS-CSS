@@ -20,11 +20,51 @@ html {
   // kontener
   display: flex;
   flex-wrap: wrap;
-  // pozycja
+  flex-direction: row;
+  align-content: flex-start;
+  // pozycja i wielkość
   max-width: 1000px;
+  min-height: 100vh;
   margin: 0 auto;
   // wygląd
   font-size: 2rem;
   background-color: #fff;
   box-shadow: 0 0 4px 0 #000;
+}
+
+.logo {
+  flex-basis: 200px;
+  height: 80px;
+  background-color: cadetblue;
+}
+
+.search {
+  flex-grow: 1;
+  background-color: tomato;
+}
+
+.settings {
+  background-color: wheat;
+  padding: 0 50px;
+}
+
+.menu {
+  background-color: yellowgreen;
+  flex-basis: 100%;
+}
+
+.main-articles {
+  background-color: violet;
+  flex-basis: 100%;
+  min-height: 45vh;
+}
+
+.article-list {
+  background-color: yellowgreen;
+  flex-basis: 100%;
+}
+
+.footer {
+  background-color: violet;
+  flex-basis: 100%;
 }
