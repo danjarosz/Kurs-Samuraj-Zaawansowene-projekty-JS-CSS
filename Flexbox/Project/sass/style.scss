@@ -135,10 +135,66 @@ html {
   }
 }
 
+.article {
+  padding: 30px 50px;
+  color: #333;
+  text-align: center;
+
+  &__image {
+    display: block;
+    width: 100%;
+  }
+
+  &__title {
+    font-family: $special-font;
+    text-transform: uppercase;
+    font-size: 3rem;
+    padding: 35px 0 15px;
+  }
+
+  &__introduction {
+    line-height: 1.6;
+    font-size: 1.6rem;
+  }
+
+  &__btn {
+    display: block;
+    width: 50%;
+    min-width: 200px;
+    font-size: 1.8rem;
+    text-decoration: none;
+    border: 2px solid #000;
+    padding: 6px 12px;
+    margin: 10px auto;
+    background-color: $main-color;
+    color: #000;
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
+}
+
 .main-articles {
-  background-color: violet;
   flex-basis: 100%;
-  min-height: 45vh;
+  background-color: $main-color;
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+
+  &__intro {
+    flex-basis: 100%;
+    padding: 10px 0;
+    background-color: rgba(0,0,0,0.2);
+    margin: 60px 0 30px;
+    text-align: center;
+    font-size: 4.4rem;
+    letter-spacing: 2px;
+  }
+
+  .article {
+    flex-basis: 50%;
+  }
 }
 
 .article-list {
