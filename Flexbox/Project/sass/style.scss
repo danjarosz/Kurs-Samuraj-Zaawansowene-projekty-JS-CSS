@@ -43,7 +43,39 @@ html {
 
 .search {
   flex-grow: 1;
-  background-color: tomato;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__input {
+    flex-basis: 60%;
+    height: 50%;
+    margin-right: 10px;
+    padding: 0 10px;
+    font-size: 1.4rem;
+
+    &:focus {
+      box-shadow: 0 0 2px 1px $main-color;
+      font-weight: 700;
+    }
+  }
+
+  &__btn {
+    font-size: 1.4rem;
+    height: 50%;
+    padding: 0 10px;
+    border: 2px solid #000;
+    background-color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color .3s, color .3s;
+
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+
 }
 
 .settings {
