@@ -220,6 +220,35 @@ html {
 }
 
 .footer {
-  background-color: violet;
   flex-basis: 100%;
+  background-color: $main-color;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 0;
+
+  .sm-links {
+    flex-basis: 30%;
+  }
+}
+
+.sm-links {
+  font-family: $special-font;
+  color: #fff;
+  padding: 20px;
+
+  &--darken {
+    background-color: darken($main-color, 25%);
+  }
+
+  &__title {
+    margin: 20px 0 40px;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  &__item {
+    text-indent: 40px;
+    font-size: 1.8rem;
+  }
 }
