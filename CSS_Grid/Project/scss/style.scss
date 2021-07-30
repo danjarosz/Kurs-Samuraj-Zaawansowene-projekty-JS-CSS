@@ -19,12 +19,13 @@ body {
   margin: 0 auto;
 
   @media (min-width: 1024px) {
-    grid-template-columns: 300px 1fr;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: minmax(300px, auto) 1fr;
+    grid-template-rows: auto auto auto 1fr auto auto;
     grid-template-areas: 
       "logo gallery"
       "menu gallery"
       "search gallery"
+      ". gallery"
       "contact gallery"
       "footer footer";
   }
@@ -41,13 +42,17 @@ body {
   background-color: violet;
 
   @media (min-width: 1024px) {
-    align-self: start;
+    height: 80px
   }
 }
 
 .menu {
   grid-area: menu;
   background-color: rgb(0, 255, 106);
+
+  @media (min-width: 1024px) {
+    height: 120px
+  }
 }
 
 .gallery {
@@ -78,10 +83,6 @@ body {
   grid-area: contact;
   height: 60px;
   background-color: rgba(0, 0, 0, 0.589);
-
-  @media (min-width: 1024px) {
-    align-self: end;
-  }
 }
 
 .footer {
