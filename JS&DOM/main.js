@@ -151,6 +151,11 @@ const handleSearchFormSubmit = (e, resultTarget) => {
     return;
   }
 
+  const node = "p";
+  const text = `Liczba znalezionych elementów (${searchInputValue}): ${foundNodes.length}`;
+  const style = "grid-column: 1/-1; grid-row: 1/2; text-align: center";
+  addElement(node, text, "style", style, resultTarget);
+
   foundNodes.forEach((foundNode) => {
     const tagName = foundNode.tagName;
     const classAttr = foundNode.getAttribute("class");
