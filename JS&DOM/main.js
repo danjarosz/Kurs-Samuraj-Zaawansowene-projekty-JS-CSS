@@ -146,7 +146,7 @@ const handleSearchFormSubmit = (e, resultTarget) => {
   if (foundNodes.length === 0) {
     const node = "p";
     const text = `Nie znaleziono elementów: ${searchInputValue}`;
-    const style = "flex-basis: 100%; text-align: center";
+    const style = "grid-column: 1/-1; grid-row: 1/2; text-align: center";
     addElement(node, text, "style", style, resultTarget);
     return;
   }
