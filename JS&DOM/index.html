@@ -9,21 +9,33 @@
   </head>
   <body>
     <div class="form-container">
-      <form action="/" class="form from--add">
+      <form action="/" class="form form--add">
         <h1 class="form__title">Dodaj element do DOM</h1>
         <input
+          name="node"
           type="text"
           class="form__input"
           placeholder="element HTML"
           required
         />
         <input
+          name="text"
           type="text"
           class="form__input"
           placeholder="tekst w elemencie HTML"
         />
-        <input type="text" class="form__input" placeholder="atrybut" />
-        <input type="text" class="form__input" placeholder="wartość atrybutu" />
+        <input
+          name="attr"
+          type="text"
+          class="form__input"
+          placeholder="atrybut"
+        />
+        <input
+          name="attr-value"
+          type="text"
+          class="form__input"
+          placeholder="wartość atrybutu"
+        />
         <button class="form__button">Dodaj element</button>
       </form>
       <form action="/" class="form form--search">

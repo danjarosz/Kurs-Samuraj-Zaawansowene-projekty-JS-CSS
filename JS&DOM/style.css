@@ -49,6 +49,14 @@ body {
   margin: 0 auto;;
 }
 
+.content {
+  box-sizing: border-box;
+  padding: 20px;
+  box-shadow: 0 0 2px 1px #ccc;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .footer {
   background-color: #000;
   color: #fff;
