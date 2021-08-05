@@ -1,5 +1,14 @@
-const getUsers = () => {
-  const url = `https://randomuser.me/api/?results=100`;
+const getUsers = (e) => {
+  e.preventDefault();
+
+  const form = e.target;
+  const usersGender = form.querySelector('[name="gender"]').value;
+  const usersNumber = form.querySelector('[name="amount"]').value;
+
+  const url = `https://randomuser.me/api/?results=${usersNumber}&gender=${
+    usersGender === "both" ? "male,female" : usersGender
+  }`;
+
   fetch(url)
     .then((res) => {
       if (res.ok && res.status >= 200 && res.status < 300) {
@@ -16,4 +25,4 @@ const getUsers = () => {
     });
 };
 
-document.querySelector(".download-users").addEventListener("click", getUsers);
+document.querySelector(".generator").addEventListener("submit", getUsers);
