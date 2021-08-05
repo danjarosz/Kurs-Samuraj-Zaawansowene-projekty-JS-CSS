@@ -1,3 +1,24 @@
+const showUsers = (users) => {
+  if (!users.length) {
+    return;
+  }
+  const resultArea = document.querySelector(".user-list");
+  resultArea.innerHTML = "";
+
+  users.forEach((user) => {
+    const userEl = document.createElement("div");
+    userEl.className = "user";
+    userEl.innerHTML = `
+      <img class="user__image" src="${user.picture.medium}"/>
+      <div class="user__name">${user.name.title.toUpperCase()} ${
+      user.name.first
+    } ${user.name.last}</div>
+    `;
+
+    resultArea.appendChild(userEl);
+  });
+};
+
 const getUsers = (e) => {
   e.preventDefault();
 
@@ -18,7 +39,7 @@ const getUsers = (e) => {
     })
     .then((data) => data.results)
     .then((users) => {
-      console.log(users);
+      showUsers(users);
     })
     .catch((err) => {
       throw Error(err);
