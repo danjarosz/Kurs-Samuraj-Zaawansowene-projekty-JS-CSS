@@ -12,10 +12,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(() => {
       isThrottled = false;
-    }, 1000);
+    }, 500);
 
     const direction = event.wheelDelta < 0 ? 1 : -1;
+    scroll(direction);
+  });
 
+  const scrollToCurrentSection = () => {
+    sections[currentSectionIndex].scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  const scroll = (direction) => {
     if (direction === 1) {
       const isLastSection = currentSectionIndex === sections.length - 1;
       if (isLastSection) {
@@ -29,9 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     currentSectionIndex = currentSectionIndex + direction;
-    sections[currentSectionIndex].scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  });
+    scrollToCurrentSection();
+  };
 });
