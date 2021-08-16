@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+}
+
+.ballon-animation {
+  position: relative;
+  background-color: #00e7ff;
+  height: 100vh;
+}
+
+.flying-cloud {
+  position: absolute;
+  width: 20%;
+}
+
+.flying-cloud:nth-child(1) {
+  top: 30%;
+  left: 20%
+} 
+
+.flying-cloud:nth-child(2) {
+  top: 0%;
+  left: 24%
+} 
+
+.flying-cloud:nth-child(3) {
+  top: 10%;
+  left: 60%;
+  z-index: 1;
+} 
+
+.flying-cloud:nth-child(4) {
+  top: 20%;
+  left: 40%;
+  z-index: 1;
+} 
+
+.flying-cloud:nth-child(5) {
+  top: 30%;
+  left: 60%
+} 
+
+.flying-cloud:nth-child(6) {
+  top:15%;
+  left: 33%
+} 
+
+.flying-ballon {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 15%;
+}
