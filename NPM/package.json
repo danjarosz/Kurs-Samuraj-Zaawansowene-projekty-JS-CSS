@@ -4,8 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js",
+    "compile-sass": "node-sass sass/styles.scss --output css/styles.css"
   },
   "author": "Daniel Jarosz",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "node-sass": "^6.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "nodemon": "^2.0.12"
+  }
 }
