@@ -4,13 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prod": "webpack --mode production",
-    "dev": "webpack --mode development",
-    "test1": "webpack src/app.js --mode=none",
-    "test2": "webpack src/app.js -o build/main2.js --mode production",
-    "test3": "webpack --entry ./src/app.js --output ./build2/main2.js --mode production",
-    "test4": "webpack --mode=development --output-path=bundlessssss --output-filename=code.js",
-    "test5": "webpack --mode development"
+    "prod": "webpack --config ./webpack.config.prod.js",
+    "dev": "webpack --config ./webpack.config.develop.js"
   },
   "keywords": [],
   "author": "",
