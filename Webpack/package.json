@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "prod": "webpack --mode=production",
-    "dev": "webpack --mode=development"
+    "dev": "webpack --mode=development",
+    "test1": "webpack ./src/app.js --mode none",
+    "test2": "webpack ./src/app.js -o ./build/main.js --mode production",
+    "test4": "webpack --output-path bundles"
   },
   "author": "",
   "license": "ISC",
