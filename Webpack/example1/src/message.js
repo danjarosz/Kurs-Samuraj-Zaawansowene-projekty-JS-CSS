@@ -1,3 +1,6 @@
 export const message = (info) => console.log(info);
-export const messageDOM = (info) => document.body.textContent = info;
+export const messageDOM = (info) => {
+  const container = document.querySelector("div");
+  container.textContent = info;
+};
 const a = 555;
