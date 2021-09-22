@@ -13,6 +13,12 @@ module.exports = {
     filename: "[name]-[contenthash:6].js",
     path: path.resolve(__dirname, "..", "build"),
   },
+  devServer: {
+    open: true,
+    contentBase: path.resolve(__dirname, "..", "public"),
+    host: "localhost",
+    port: "5001",
+  },
   // loaders
   module: {
     rules: [
@@ -26,7 +32,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: "New app",
+      // title: "New app",
       template: "./src/template.html",
     }),
   ],
