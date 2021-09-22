@@ -5,10 +5,11 @@ module.exports = {
   mode: "development",
   entry: {
     main: "./src/index.js",
+    // app: "./src/app.js",
     // other-name: path-to-file => it renders another file
   },
   output: {
-    filename: "[name]-bundle.js",
+    filename: "[name]-[contenthash:6].js",
     path: path.resolve(__dirname, "..", "build"),
   },
   // loaders
