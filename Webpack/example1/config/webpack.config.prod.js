@@ -1,9 +1,11 @@
 const path = require("path");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   mode: "production",
   entry: {
     main: "./src/index.js",
+    // other-name: path-to-file => it renders another file
   },
   output: {
     filename: "[name]-bundle.js",
@@ -18,4 +20,6 @@ module.exports = {
       },
     ],
   },
+  // plugins
+  plugins: [new CleanWebpackPlugin()],
 };

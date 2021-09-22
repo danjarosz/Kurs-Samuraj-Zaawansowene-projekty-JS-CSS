@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "prod": "webpack --config ./config/webpack.config.prod.js",
-    "dev": "webpack --config ./config/webpack.config.dev.js"
+    "dev": "webpack --config ./config/webpack.config.dev.js",
+    "dev:watch": "npm run dev -- --watch",
+    "prod-watch": "webpack --config ./config/webpack.config.prod.js --watch"
   },
   "keywords": [],
   "author": "",
