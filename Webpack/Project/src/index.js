@@ -11,7 +11,11 @@ addImage("h1");
 
 const e1 = new Creator();
 e1.addBgc("red");
+e1.showColor();
 const e2 = new Creator();
 e2.addBgc("green");
+e2.showColor();
 const e3 = new Creator();
-e3.addBgc("blue");
+e3.showColor();
+e3.addBgc();
+// e3.addBgc("blue");

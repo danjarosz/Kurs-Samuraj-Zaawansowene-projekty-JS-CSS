@@ -6,7 +6,13 @@ export default class {
     this.addBgc = this.addBgc.bind(this);
   }
 
-  addBgc(color) {
+  color = "white";
+
+  addBgc(color = this.color) {
     this.element.style.backgroundColor = color;
   }
+
+  showColor = () => {
+    console.log(this.element.style.backgroundColor);
+  };
 }
