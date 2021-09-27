@@ -21,6 +21,8 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "7.12.10",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.6",
     "babel-cli": "6.18.0",
     "babel-loader": "8.2.2",
     "babel-plugin-transform-class-properties": "6.24.1",
