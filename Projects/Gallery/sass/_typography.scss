@@ -1,0 +1,24 @@
+@import "./variables";
+
+html,
+body {
+  font-size: $base-font-size;
+  font-family: "Montserrat", sans-serif;
+  color: $text-color;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin: $main-spacing;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: $main-spacing;
+}
+
+p {
+  margin-bottom: 1.6rem;
+  line-height: 1.5;
+}
