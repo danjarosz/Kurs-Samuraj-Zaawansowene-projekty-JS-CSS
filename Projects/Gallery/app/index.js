@@ -37,6 +37,12 @@ class Doggo {
       .then((data) => data.message);
   };
 
+  showImageWhenReady = (image) => {
+    this.imgEl.setAttribute("src", image);
+    this.backgroundEl.style.background = `url("${image}")`;
+    this.hideLoading();
+  };
+
   addBreed = (breed, subBreed) => {
     let name;
     let type;
@@ -58,9 +64,8 @@ class Doggo {
     tileContent.addEventListener("click", () => {
       this.showLoading();
       this.getRandomImageByBreed(type).then((src) => {
-        this.imgEl.setAttribute("src", src);
-        this.backgroundEl.style.background = `url("${src}")`;
-        this.hideLoading();
+        window.scrollTo(0, 0);
+        this.showImageWhenReady(src);
       });
     });
 
@@ -85,9 +90,7 @@ class Doggo {
   init = () => {
     this.showLoading();
     this.getRandomImage().then((src) => {
-      this.imgEl.setAttribute("src", src);
-      this.backgroundEl.style.background = `url("${src}")`;
-      this.hideLoading();
+      this.showImageWhenReady(src);
     });
 
     this.showAllBreeds();
