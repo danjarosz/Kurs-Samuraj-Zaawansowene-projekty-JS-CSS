@@ -1,0 +1,38 @@
+.spinner {
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+
+  &__content {
+    width: 40px;
+    height: 40px;
+    background-color: $primary-color;
+    animation: rotateplane 1.2s infinite ease-in-out;
+  }
+
+  &--visible {
+    display: flex;
+  }
+}
+
+@keyframes rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+
+  50% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(180deg);
+  }
+}
