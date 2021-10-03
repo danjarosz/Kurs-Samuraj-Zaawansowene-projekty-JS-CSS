@@ -1,1 +1,15 @@
-$bg-main-color: #333;
+$base-font-size: 16px;
+$small-font-size: 14px;
+
+$font-family: "Montserrat", sans-serif;
+
+$main-spacing: 20px;
+$max-width: 1000px;
+
+$color-primary: #f7a72e;
+
+$breakpoints: (
+  xs: 500px,
+  sm: 800px,
+  md: 1000px,
+);

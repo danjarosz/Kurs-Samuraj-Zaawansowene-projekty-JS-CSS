@@ -1,17 +1,16 @@
-header {
-  height: 300px;
-  background-color: $bg-main-color;
+.header {
+  background-color: $color-primary;
+  color: #fff;
+  padding: $main-spacing 0;
+  margin-bottom: $main-spacing;
 
-  h1 {
-    font-size: 40px;
-    color: #fff;
-
-    strong {
-      color: tomato
-    }
+  &__content {
+    display: flex;
+    align-items: center;
   }
 
-  h2 {
-    font-size: 32px;
+  &__logo {
+    margin-right: $main-spacing / 2;
+    width: $main-spacing * 2;
   }
 }
