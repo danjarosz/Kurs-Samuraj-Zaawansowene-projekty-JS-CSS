@@ -103,6 +103,17 @@ document.addEventListener("DOMContentLoaded", () => {
     valuesContainer.appendChild(table);
   };
 
-  drawDesktopValues();
-  drawMobileValues();
+  const drawValues = (isDesktop) => {
+    if (isDesktop) {
+      drawDesktopValues();
+    } else {
+      drawMobileValues();
+    }
+  };
+
+  drawValues(desktopViewport.matches);
+
+  desktopViewport.addEventListener("change", (isDesktop) => {
+    drawValues(isDesktop.matches);
+  });
 });
