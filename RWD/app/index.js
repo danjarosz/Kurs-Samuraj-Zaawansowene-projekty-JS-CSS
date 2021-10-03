@@ -32,6 +32,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const desktopViewport = window.matchMedia("screen and (min-width: 500px)");
 
+  const drawMobileValues = () => {
+    valuesContainer.innerHTML = "";
+
+    let list = document.createElement("ul");
+
+    values.forEach((value) => {
+      let element = document.createElement("li");
+
+      let name = document.createElement("div");
+      name.innerHTML = `
+        <strong>Nazwa: </strong>${value.name}
+      `;
+
+      let calories = document.createElement("div");
+      calories.innerHTML = `
+        <strong>Kalorie: </strong>${value.calories}
+      `;
+
+      let fat = document.createElement("div");
+      fat.innerHTML = `
+        <strong>Tłuszcz: </strong>${value.fat}
+      `;
+
+      let carbs = document.createElement("div");
+      carbs.innerHTML = `
+        <strong>Węglowodany: </strong>${value.carbs}
+      `;
+
+      element.appendChild(name);
+      element.appendChild(calories);
+      element.appendChild(fat);
+      element.appendChild(carbs);
+
+      list.appendChild(element);
+    });
+
+    valuesContainer.appendChild(list);
+  };
+
   const drawDesktopValues = () => {
     valuesContainer.innerHTML = "";
 
@@ -65,4 +104,5 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   drawDesktopValues();
+  drawMobileValues();
 });
