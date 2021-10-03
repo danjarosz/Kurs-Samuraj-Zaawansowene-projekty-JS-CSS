@@ -27,7 +27,43 @@
       </div>
     </header>
     <main>
-      <div class="container"></div>
+      <div class="container">
+        <div class="app">
+          <div class="app__description">
+            <p>
+              Poniżej zaprezentowano uproszczoną tablicę składników odżywczych
+            </p>
+            <p>
+              W celu uzyskania szczegółowych informacji skantaktuj się poprzez:
+            </p>
+            <div class="app__contact-method">
+              <span class="fa fa-phone"></span>
+              +48 123 456 789
+            </div>
+            <div class="app__contact-method">
+              <span class="fa fa-envelope"></span>
+              <a href="mailto:exaple@email.com">exaple@email.com</a>
+            </div>
+
+            <h2>Wykaz wartości odżywczych:</h2>
+            <div class="app__values"></div>
+
+            <div class="app__images">
+              <picture>
+                <source
+                  srcset="/assets/nutrition-1000.jpg"
+                  media="(min-width: 800px)"
+                />
+                <source
+                  srcset="/assets/nutrition-800.jpg"
+                  media="(min-width: 500px)"
+                />
+                <img src="/assets/nutrition-500.jpg" alt="nutrition" />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>
