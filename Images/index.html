@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Responsive Images</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <h1>Użycie responsywnych obrazków - praktyka</h1>
+  <picture>
+    <source media="(min-width:1280px)" srcset="img/art_direction/nature.jpg">
+    <source media="(min-width:800px)" srcset="img/art_direction/nature-medium.jpg">
+    <source media="(min-width:360px) and (orientation: portrait)" srcset="img/art_direction/nature-small-portrait.jpg">
+    <source media="(min-width:360px)" srcset="img/art_direction/nature-small.jpg">
+
+    <img src="img/art_direction/nature.jpg" alt="natura i wiewiórka">
+  </picture>
+
+  <img srcset="
+    img/resolution_switching/tree_460-307.jpg 460w,
+    img/resolution_switching/tree_800-533.jpg 800w,
+    img/resolution_switching/tree_1280-853.jpg 1280w,
+    img/resolution_switching/tree_1920-1280.jpg 1920w
+    " sizes="
+    (max-width: 460px) 414px,
+    (max-width: 820px) 738px,
+    (max-width: 1300px) 1170px,
+    1900px,
+    " src="img/resolution_switching/tree_1920-1280.jpg" alt="natura i drzewo">
+
+</body>
+
+</html>
