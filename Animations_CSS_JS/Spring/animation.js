@@ -71,4 +71,12 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   init();
+
+  // dostanie się do css z poziomu JS
+  const rules = document.styleSheets[0].cssRules;
+  for (const i of rules) {
+    console.log(i);
+    // używając odpowiednich właściwości, można wybrać właściwą regułę
+  }
+  // console.log(rules);
 });
