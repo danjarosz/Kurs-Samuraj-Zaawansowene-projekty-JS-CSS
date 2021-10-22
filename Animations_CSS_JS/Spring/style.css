@@ -24,8 +24,8 @@ body {
   border-radius: 50%;
   background-color: cadetblue;
 
-  animation: fly-ball-x 1s cubic-bezier(0.17, 0.67, 0.6, 1),
-    fly-ball-y 1s linear;
+  /* animation: fly-ball-x 1s cubic-bezier(0.17, 0.67, 0.6, 1),
+    fly-ball-y 1s linear; */
 }
 
 .column {
