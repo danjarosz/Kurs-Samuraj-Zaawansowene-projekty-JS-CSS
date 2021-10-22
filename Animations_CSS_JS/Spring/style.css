@@ -102,8 +102,8 @@ body {
 }
 
 :root {
-  --spring-left: -14%;
-  --power-x: 1000px;
+  --spring-left: 0;
+  --power-x: 0;
 }
 
 @keyframes fill {
