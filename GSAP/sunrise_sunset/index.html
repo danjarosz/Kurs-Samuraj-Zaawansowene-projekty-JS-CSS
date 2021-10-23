@@ -61,20 +61,16 @@
         const sunEl = document.querySelector(".sun");
 
         //color
-        TweenMax.fromTo(
-          sunEl,
-          animationDuration,
-          {
-            delay: animationDelay,
-            ease: Power0.easeNone,
-            backgroundColor: "rgb(255, 255, 0)",
-          },
-          {
-            delay: animationDelay + animationDuration / 2,
-            ease: Power0.easeNone,
-            backgroundColor: "rgb(255, 166, 0)",
-          }
-        );
+        TweenMax.to(sunEl, animationDuration, {
+          delay: animationDelay,
+          ease: "linear",
+          backgroundColor: "rgb(255, 255, 0)",
+        });
+        TweenMax.to(sunEl, animationDuration, {
+          delay: animationDelay + animationDuration / 2,
+          ease: "linear",
+          backgroundColor: "rgb(255, 166, 0)",
+        });
 
         //move
         TweenMax.to(sunEl, animationDuration, {
