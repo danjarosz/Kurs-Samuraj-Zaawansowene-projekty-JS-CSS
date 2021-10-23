@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stagger Example 1</title>
+    <style>
+      div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: tahoma, Arial, Helvetica, sans-serif;
+        font-size: 80px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div>W</div>
+    <div>ŻYCIU</div>
+    <div>WAŻNE</div>
+    <div>SĄ</div>
+    <div>NIE</div>
+    <div>TYLKO</div>
+    <div>CHWILE</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script>
+      const elements = document.querySelectorAll("div");
+
+      const colors = () => {
+        const colorList = ["black", "red", "green", "blue"];
+        const colorIndex = Math.floor(Math.random() * colorList.length);
+        return colorList[colorIndex];
+      };
+
+      TweenMax.staggerTo(
+        elements,
+        0.5,
+        {
+          opacity: 1,
+          color: colors,
+          ease: Power0.easeNone,
+        },
+        1
+      );
+      TweenMax.staggerTo(
+        elements,
+        0.2,
+        {
+          opacity: 0,
+          delay: 1,
+        },
+        1
+      );
+    </script>
+  </body>
+</html>
