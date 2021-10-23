@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunrise - Sanset</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .landscape {
+      position: relative;
+
+      height: 100vh;
+    }
+
+    .ground {
+      position: absolute;
+      z-index: 3;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 30vh;
+      background-color: green;
+    }
+
+    .sky {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 70vh;
+      background-color: rgb(0, 0, 139);
+    }
+
+    .sun {
+      position: absolute;
+      z-index: 2;
+      left: 5vw;
+      top: 75vh;
+      width: 10vw;
+      height: 10vw;
+      border-radius: 50%;
+      background-color: rgb(255, 166, 0);
+      box-shadow: 0 0 4vw rgb(255, 166, 0);
+    }
+  </style>
+  <body>
+    <div class="landscape">
+      <div class="sun"></div>
+      <div class="sky"></div>
+      <div class="ground"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script>
+      const animateSun = (animationDuration, animationDelay) => {
+        const sunEl = document.querySelector(".sun");
+
+        //color
+        TweenMax.fromTo(
+          sunEl,
+          animationDuration,
+          {
+            delay: animationDelay,
+            ease: Power0.easeNone,
+            backgroundColor: "rgb(255, 255, 0)",
+          },
+          {
+            delay: animationDelay + animationDuration / 2,
+            ease: Power0.easeNone,
+            backgroundColor: "rgb(255, 166, 0)",
+          }
+        );
+
+        //move
+        TweenMax.to(sunEl, animationDuration, {
+          delay: animationDelay,
+          ease: "linear",
+          left: "85vw",
+        });
+
+        TweenMax.to(sunEl, animationDuration / 2, {
+          delay: animationDelay,
+          ease: "none",
+          repeat: 1,
+          yoyo: true,
+          top: "25vh",
+        });
+      };
+      const animateSky = (animationDuration, animationDelay) => {
+        const skyEl = document.querySelector(".sky");
+
+        TweenMax.fromTo(
+          skyEl,
+          animationDuration / 2,
+          {
+            backgroundColor: "rgb(0, 0, 139)",
+            ease: "linear",
+            delay: animationDelay,
+          },
+          {
+            backgroundColor: "rgb(135, 207, 235)",
+            ease: "linear",
+            delay: animationDelay,
+          }
+        );
+
+        TweenMax.to(skyEl, animationDuration, {
+          backgroundColor: "rgb(0, 0, 139)",
+          ease: "linear",
+          delay: animationDelay + animationDuration / 2,
+        });
+      };
+
+      const animate = (animationDuration, animationDelay) => {
+        animateSky(animationDuration, animationDelay);
+        animateSun(animationDuration, animationDelay);
+      };
+
+      animate(15, 1);
+    </script>
+  </body>
+</html>
