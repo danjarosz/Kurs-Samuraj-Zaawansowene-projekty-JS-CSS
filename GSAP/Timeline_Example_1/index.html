@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timeline - Example 1</title>
+  </head>
+  <style>
+    .rocket {
+      position: absolute;
+      left: 50%;
+      bottom: 150px;
+      height: 200px;
+    }
+  </style>
+  <body>
+    <img class="rocket" src="./rocket.png" alt="rocket" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script>
+      const rocket = document.querySelector(".rocket");
+
+      const tl = new TimelineMax();
+      tl.set(rocket, {
+        rotation: 90,
+      });
+      tl.to(rocket, 3, {
+        rotation: "-=90",
+      })
+        .to(rocket, 2, {
+          y: -400,
+          ease: Power4.easeIn,
+          delay: 1,
+        })
+        .to(rocket, 1, {
+          y: "-=100",
+          ease: Power0.easeIn,
+        })
+        .add("rocket-fall")
+        .to(rocket, 0.7, {
+          rotation: "-= 120",
+        })
+        .to(
+          rocket,
+          1,
+          {
+            y: 80,
+          },
+          "rocket-fall"
+        )
+        .to(rocket, 0.3, {
+          opacity: 0,
+        });
+    </script>
+  </body>
+</html>
