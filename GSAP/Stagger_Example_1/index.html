@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stagger Example 1</title>
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      div {
+        flex-grow: 1;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 60px;
+        text-align: center;
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div>W</div>
+    <div>ŻYCIU</div>
+    <div>WAŻNE</div>
+    <div>SĄ</div>
+    <div>NIE</div>
+    <div>TYLKO</div>
+    <div>CHWILE</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script>
+      // reset
+      TweenMax.set("div", {
+        visibility: "visible",
+      });
+
+      //animation
+      TweenMax.staggerFrom(
+        "div",
+        0.5,
+        {
+          x: 130,
+          opacity: 0,
+          delay: 1,
+        },
+        0.4
+      );
+    </script>
+  </body>
+</html>
