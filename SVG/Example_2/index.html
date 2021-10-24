@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SVG i GSAP - SUN</title>
+  </head>
+
+  <body>
+    <svg
+      id="sun"
+      xmlns="http://www.w3.org/2000/svg"
+      width="600"
+      height="600"
+      viewBox="0 0 600 600"
+    >
+      <title>sun</title>
+      <g id="streaks">
+        <g id="streak2">
+          <polygon
+            points="206.69 167.75 150.18 39.88 232.67 152.75 206.69 167.75"
+            fill="#f47a00"
+          />
+        </g>
+        <g id="streak11">
+          <polygon
+            points="153.25 231.81 40.38 149.32 168.25 205.83 153.25 231.81"
+            fill="#f47a00"
+          />
+        </g>
+        <g id="streak10">
+          <polygon points="139 314 0 299 139 284 139 314" fill="#f47a00" />
+        </g>
+        <g id="streak9">
+          <polygon
+            points="167.75 392.31 39.88 448.82 152.75 366.33 167.75 392.31"
+            fill="#f47a00"
+          />
+        </g>
+        <g id="streak8">
+          <polygon
+            points="231.81 445.75 149.32 558.63 205.83 430.75 231.81 445.75"
+            fill="#f47a00"
+          />
+        </g>
+        <g id="streak7">
+          <polygon points="314 460 299 599 284 460 314 460" fill="#f47a00" />
+        </g>
+        <g id="streak6">
+          <polygon
+            points="392.31 431.25 448.82 559.13 366.33 446.25 392.31 431.25"
+            fill="#f47a00"
+          />
+        </g>
+        <g id="streak5">
+          <polygon
+            points="445.75 367.19 558.63 449.68 430.75 393.17 445.75 367.19"
+            fill="#f47a00"
+          />
+        </g>
+        <g id="streak4">
+          <polygon points="460 285 599 300 460 315 460 285" fill="#f47a00" />
+        </g>
+        <g id="streak3">
+          <polygon
+            points="431.25 206.69 559.13 150.18 446.25 232.67 431.25 206.69"
+            fill="#f47a00"
+          />
+        </g>
+        <g id="streak2-2" data-name="streak2">
+          <polygon
+            points="367.19 153.25 449.68 40.38 393.17 168.25 367.19 153.25"
+            fill="#f47a00"
+          />
+        </g>
+        <g id="streak1">
+          <polygon points="285 139 300 0 315 139 285 139" fill="#f47a00" />
+        </g>
+      </g>
+      <g id="face">
+        <g id="ellipse">
+          <circle cx="299.5" cy="299.5" r="125.5" fill="#ffa300" />
+          <path
+            d="M300,182a118,118,0,1,1-83.44,34.56A117.22,117.22,0,0,1,300,182m0-15A133,133,0,1,0,433,300,133,133,0,0,0,300,167Z"
+            transform="translate(-0.5 -0.5)"
+            fill="#f47a00"
+          />
+        </g>
+        <path
+          id="mouth"
+          d="M385,313c0,44.74-38.5,81-86,81s-86-36.26-86-81Z"
+          transform="translate(-0.5 -0.5)"
+          fill="#f47a00"
+        />
+        <ellipse
+          id="eye-right"
+          cx="281.5"
+          cy="255.5"
+          rx="13.5"
+          ry="35.5"
+          fill="#753500"
+        />
+        <ellipse
+          id="eye-left"
+          cx="321"
+          cy="256"
+          rx="13.5"
+          ry="35.5"
+          fill="#753500"
+        />
+      </g>
+    </svg>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script>
+      // Animacje promyków
+      TweenMax.set("#streaks polygon", {
+        transformOrigin: "50% 50%",
+        scale: 0.6,
+      });
+      TweenMax.staggerTo(
+        "#streaks polygon",
+        1,
+        { scale: 1.2, repeat: -1, yoyo: true },
+        0.3
+      );
+      // Animacja obrotu
+      TweenMax.set("#streaks", { transformOrigin: "50% 50%", scale: 0.7 });
+      TweenMax.to("#streaks", 4, {
+        rotation: 360,
+        repeat: -1,
+        ease: Power0.easeNone,
+      });
+    </script>
+  </body>
+</html>
