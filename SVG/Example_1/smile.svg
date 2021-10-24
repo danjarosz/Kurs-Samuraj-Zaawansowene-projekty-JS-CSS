@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+  <g class="head">
+    <circle class="face" cx="200" cy="200" r="150" fill="yellow" stroke="white" stroke-width="4"/>
+    <rect class="lips" width="100" height="20" x="150" y="250" stroke="red" stroke-width="8" />
+    <circle class="eye" cx="130" cy="160" r="20" fill="darkblue" />
+    <circle class="eye" cx="270" cy="160" r="20" fill="darkblue" />
+  </g>
+</svg>
