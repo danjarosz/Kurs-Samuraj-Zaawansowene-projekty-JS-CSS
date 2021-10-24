@@ -21,6 +21,18 @@
       display: block;
       margin: 0 auto;
     }
+
+    .face {
+      animation: face-color infinite alternate 1s;
+    }
+
+    @keyframes face-color {
+      100% {
+        fill: orange;
+        stroke: yellow;
+        stroke-width: 20px;
+      }
+    }
   </style>
   <body>
     <div class="image-wrapper">
