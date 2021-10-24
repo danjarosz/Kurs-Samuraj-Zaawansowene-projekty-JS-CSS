@@ -38,12 +38,27 @@ document.addEventListener("DOMContentLoaded", () => {
     return tl;
   };
 
-  const move = () => {
+  const move = (elements) => {
     const tl = new TimelineMax();
+
+    tl.staggerTo(
+      elements,
+      0.5,
+      {
+        y: -60,
+        repeat: -1,
+        yoyo: true,
+        ease: Power0.easeNone,
+      },
+      0.5
+    );
+
     return tl;
   };
 
   // Master timeline
   const master = new TimelineMax();
+  master.add("start");
   master.add(bars());
+  master.add(move(document.querySelectorAll("#leg-right, #leg-left")), "start");
 });
