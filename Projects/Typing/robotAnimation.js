@@ -34,7 +34,36 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const blink = () => {
-    const tl = new TimelineMax();
+    const tl = new TimelineMax({
+      repeat: -1,
+      repeatDelay: 3,
+      delay: 2,
+    });
+    const eyes = document.querySelectorAll("#eye-left, #eye-right");
+
+    tl.set(eyes, { transformOrigin: "50%, 50%" })
+      .to(eyes, 0.1, {
+        scaleY: 0,
+        fill: "#231f20",
+      })
+      .to(eyes, 0.05, {
+        scaleY: 1,
+        fill: "#48b3e6",
+      })
+      .to(
+        eyes,
+        0.1,
+        {
+          scaleY: 0,
+          fill: "#231f20",
+        },
+        "+=0.5"
+      )
+      .to(eyes, 0.05, {
+        scaleY: 1,
+        fill: "#48b3e6",
+      });
+
     return tl;
   };
 
@@ -59,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Master timeline
   const master = new TimelineMax();
   master.add("start");
-  master.add(bars());
+  master.add(bars(), "start");
   master.add(move(document.querySelectorAll("#leg-right, #leg-left")), "start");
+  master.add(blink(), "start");
 });
