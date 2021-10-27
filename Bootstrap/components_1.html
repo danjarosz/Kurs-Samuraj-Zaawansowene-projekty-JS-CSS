@@ -19,6 +19,83 @@
     <title>Hello, world!</title>
   </head>
   <body>
+    <div class="container">
+      <h1>Alerts</h1>
+      <h3>Typy alertów</h3>
+      <div class="alert alert-primary">
+        Komunikat <a href="#" class="alert-link">Sprawdź dlaczego</a>
+      </div>
+      <div class="alert alert-secondary">
+        Komunikat 2 <a href="#" class="alert-link">Sprawdź dlaczego</a>
+      </div>
+      <div class="alert alert-success">
+        Skuces <a href="#" class="alert-link">Sprawdź dlaczego</a>
+      </div>
+      <div class="alert alert-danger">
+        Błąd <a href="#" class="alert-link">Sprawdź dlaczego</a>
+      </div>
+      <div class="alert alert-warning">
+        Ostrzeżenie <a href="#" class="alert-link">Sprawdź dlaczego</a>
+      </div>
+
+      <h3>Zamykany alert</h3>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
+        dolore perferendis doloribus fugiat. Nisi facilis quis est placeat eum
+        corrupti quibusdam quaerat deleniti saepe aliquam beatae incidunt,
+        laboriosam ipsa eius!
+        <button
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <h1>Badge</h1>
+      <h4>Tekst <span class="badge badge-primary">primary</span></h4>
+      <h4>Tekst <span class="badge badge-secondary">secondary</span></h4>
+      <h4>Tekst <span class="badge badge-success">success</span></h4>
+      <h4>Tekst <span class="badge badge-danger">danger</span></h4>
+      <h4>Tekst <span class="badge badge-warning">warning</span></h4>
+      <h4>Tekst <span class="badge badge-info">info</span></h4>
+      <h4>Tekst <span class="badge badge-light">light</span></h4>
+      <h4>Tekst <span class="badge badge-dark">dark</span></h4>
+
+      <h1>Button</h1>
+      <div class="col-12">
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-secondary">Secondary</button>
+        <button class="btn btn-success">Success</button>
+        <button class="btn btn-danger">Danger</button>
+        <button class="btn btn-warning">Warning</button>
+        <button class="btn btn-info">info</button>
+        <button class="btn btn-light">light</button>
+        <button class="btn btn-dark">dark</button>
+        <a href="#" class="btn btn-link">link</a>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-outline-primary">Primary</button>
+        <button class="btn btn-outline-secondary">Secondary</button>
+        <button class="btn btn-outline-success">Success</button>
+        <button class="btn btn-outline-danger">Danger</button>
+        <button class="btn btn-outline-warning">Warning</button>
+        <button class="btn btn-outline-info">info</button>
+        <button class="btn btn-outline-light">light</button>
+        <button class="btn btn-outline-dark">dark</button>
+        <a href="#" class="btn btn-outline-link">link</a>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-outline-primary btn-lg">Primary</button>
+        <button class="btn btn-outline-secondary btn-sm">Secondary</button>
+      </div>
+      <div class="col-12">
+        <h4>Disabled button</h4>
+        <button class="btn btn-primary btn-lg" disabled>Primary</button>
+      </div>
+    </div>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
